@@ -1,22 +1,23 @@
 package com.example.thread
 
+import android.content.Intent
 import android.graphics.Color.parseColor
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.thread.databinding.ActivityMainBinding
+import com.example.thread.databinding.OneButtonMultithreadBinding
 
-class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+class OneButtonMultiThread : AppCompatActivity() {
+    private lateinit var binding: OneButtonMultithreadBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = OneButtonMultithreadBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.title = ""
         supportActionBar?.hide()
         //Multi Threading-->It is the ability to perform a number of different tasks
         // at the same time in parallel without any error
         var onOff = false
-        binding.button.setOnClickListener()
+        binding.button1.setOnClickListener()
         {
             val listColor=ArrayList<String>()
             listColor.add("#FF018786")
@@ -31,16 +32,16 @@ class MainActivity : AppCompatActivity() {
            onOff=!onOff
             var colorNumber=0
             if (onOff) {
-                binding.button.text = "Stop"
+                binding.button1.text = "Stop"
                 Thread(Runnable {
                     while (onOff) {
                         runOnUiThread()
                         {
-                         binding.te1.setBackgroundColor(parseColor(listColor[colorNumber]))
-                         if(colorNumber==7)
-                             colorNumber=0
-                         else
-                             colorNumber++
+                            binding.te1.setBackgroundColor(parseColor(listColor[colorNumber]))
+                            if(colorNumber==7)
+                                colorNumber=0
+                            else
+                                colorNumber++
                         }
                         Thread.sleep(1000)
                     }
@@ -85,12 +86,17 @@ class MainActivity : AppCompatActivity() {
                     }
                 }).start()
             } else {
-                binding.button.text = "Start"
+                binding.button1.text = "Start"
                 binding.te1.setBackgroundColor(parseColor("#FFFFFFFF"))
                 binding.te2.setBackgroundColor(parseColor("#FFFFFFFF"))
                 binding.te3.setBackgroundColor(parseColor("#FFFFFFFF"))
                 binding.te4.setBackgroundColor(parseColor("#FFFFFFFF"))
             }
+        }
+        binding.button2.setOnClickListener()
+        {
+            val intent=Intent(this,TwoButtonTwoThread::class.java)
+            startActivity(intent)
         }
     }
 }

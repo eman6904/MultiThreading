@@ -7,7 +7,7 @@
     android:gravity="center"
     android:background="@color/black"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".OneButtonMultiThread">
 <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
@@ -56,17 +56,35 @@
         tools:layout_editor_absoluteX="215dp"
         tools:layout_editor_absoluteY="274dp" />
     </LinearLayout>
-    <TextView
-        android:id="@+id/button"
-        android:layout_width="@dimen/_140sdp"
-        android:layout_height="@dimen/_50sdp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_30sdp"
+       android:gravity="center">
+    <TextView
+        android:id="@+id/button1"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_40sdp"
         android:gravity="center"
         android:text="@string/start"
         android:textColor="#fff"
-        android:textSize="@dimen/_25sdp"
+        android:textSize="@dimen/_20sdp"
        android:background="@drawable/shape"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="215dp"
         tools:layout_editor_absoluteY="274dp" />
+    <TextView
+        android:id="@+id/button2"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:gravity="center"
+        android:text="@string/next"
+        android:textColor="#fff"
+        android:textSize="@dimen/_20sdp"
+        android:background="@drawable/shape"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="274dp" />
+        android:text="TextView" />
+</LinearLayout>
 </LinearLayout>

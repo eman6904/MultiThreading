@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".TwoButtonTwoThread">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/num1"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="@dimen/_30sdp"
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="95dp" />
+
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/increase"
+        tools:layout_editor_absoluteX="209dp"
+        tools:layout_editor_absoluteY="166dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_50sdp">
+    <TextView
+        android:id="@+id/t2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nn"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="@dimen/_30sdp"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="209dp" />
+    <Button
+        android:id="@+id/b2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="decrease"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="331dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Thread</string>
     <string name="start">Start</string>
+    <string name="num1">0</string>
+    <string name="increase">Increase</string>
+    <string name="num2">5</string>
+    <string name="next">Next</string>
+    <string name="nn">1000</string>
 </resources>
